@@ -18,6 +18,7 @@ import {NouisliderModule} from 'ng2-nouislider';
 import { MapComponent } from './post/map/map.component';
 
 import { AgmCoreModule } from '@agm/core';
+import {environment} from "../environments/environment.prod";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { AgmCoreModule } from '@agm/core';
     PlotlyModule,
     NouisliderModule,
     AgmCoreModule.forRoot({
-      apiKey: 'GOOGLE_MAPS_API_KEY',
+      apiKey: environment.GOOGLE_MAPS_API_KEY,
       libraries: ['places']
     }),
     RouterModule.forRoot([

@@ -3,8 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  API_URL: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?'
+    production: false,
+    API_URL: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?',
+    GOOGLE_MAPS_API_KEY: 'API_KEY'
 };
 
 /*
