@@ -6,12 +6,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Download the project and open the terminal in the project file. Once there execute `npm install`to install all dependencies. Wait untill everything is installed.
 
-Then access to the file `/disease-trend-graph-map/src/app/app.module.ts` and change the `GOOGLE_MAPS_API_KEY` inside the code:
+Then access to the file `src/environments/environment.prod.ts` and change the `API_KEY` inside the code:
 ```
-AgmCoreModule.forRoot({
-      apiKey: 'GOOGLE_MAPS_API_KEY',
-      libraries: ['places']
-      }),
+export const environment = {
+    production: true,
+    API_URL: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?',
+    GOOGLE_MAPS_API_KEY: 'API_KEY'
+};
 ```
 
 Then run `ng serve` or `npm start`to compile the project and access to the url specified, normally: `http://localhost:4200/`.
