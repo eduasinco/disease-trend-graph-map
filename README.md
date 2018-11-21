@@ -23,3 +23,8 @@ Then run `ng serve` or `npm start`to compile the project and access to the url s
 3. Change `API_KEY` inside `src/environments/environment.prod.ts`.
 4. `ng serve`
 5. Open `http://localhost:4200/` in browser.
+
+
+## Preview
+
+<img width="1440" alt="screenshot 2018-11-21 at 17 43 19" src="https://user-images.githubusercontent.com/37312148/48855933-6ab65d80-edb5-11e8-94db-f16eb08c5b82.png">
