@@ -1,0 +1,41 @@
+<form class="pb-2" [formGroup]="f" (submit)="search(); submited = true" (keydown.enter)="search()">
+  <div class="col-12">
+    <div class="row">
+      <div class="form-group col-md-4 col-lg-2">
+        <label>
+          Area or Disease:
+          <input class="form-control" type="text" formControlName="term" [value]="termm" (focus)="termm = ''">
+          <div *ngIf="submited && term.touched && term.invalid" class="alert alert-danger">This field must not be empty
+          </div>
+        </label>
+      </div>
+      <div class="form-group col-md-4 col-lg-2">
+        <label>
+          From:
+          <input class="form-control" type="text" formControlName="mindate">
+          <div *ngIf="(mindate.touched && !mindate.value) || (submited && mindate.invalid)" class="alert alert-danger">Not a valid
+            year
+          </div>
+        </label>
+      </div>
+
+      <div class="form-group col-md-4 col-lg-2">
+        <label>
+          To:
+          <input class="form-control" type="text" formControlName="maxdate">
+          <div *ngIf="(maxdate.touched && !maxdate.value) || (submited && maxdate.invalid)" class="alert alert-danger">Not a valid year
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="container row">
+      <button class="btn btn-block col-md-12 col-lg-6" type="submit" style="background-color: beige">Search</button>
+    </div>
+  </div>
+</form>
+<div class="col-md-12 col-lg-6">
+  <h1>Trend Plot</h1>
+  <plotly-plot [data]="graph.data" [layout]="graph.layout"></plotly-plot>
+</div>
+<!--AIzaSyBLEkT9a5zw8uxoXkpYUZJ6-ojasnqdM9g-->
+<app-map *ngIf="retrieve_ended" [ids_array]="ids_array"></app-map>
