@@ -10,7 +10,7 @@ Wait untill everything is installed and then run `ng serve` or `npm start`to com
 
 ## Summary
 
-1: Access to the project file in terminal.
-2: `npm install`
-3: `ng serve`
-4: Open `http://localhost:4200/` in browser.
+1. Access to the project file in terminal.
+2. `npm install`
+3. `ng serve`
+4. Open `http://localhost:4200/` in browser.
