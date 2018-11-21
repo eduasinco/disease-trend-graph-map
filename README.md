@@ -4,6 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+Download the project and open the terminal in the project file. Once there execute `npm install`to install all dependencies.
+
+Wait untill everything is installed and then run `ng serve` or `npm start`to compile the project and access to the url specified, normally: `http://localhost:4200/`.
+
+## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
