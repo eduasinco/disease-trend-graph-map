@@ -28,3 +28,5 @@ Then run `ng serve` or `npm start`to compile the project and access to the url s
 ## Preview
 
 <img width="1440" alt="screenshot 2018-11-21 at 17 43 19" src="https://user-images.githubusercontent.com/37312148/48855933-6ab65d80-edb5-11e8-94db-f16eb08c5b82.png">
+
+<img width="1440" alt="screenshot 2018-11-21 at 17 49 20" src="https://user-images.githubusercontent.com/37312148/48856097-d39dd580-edb5-11e8-8660-7bf1a418cb02.png">
