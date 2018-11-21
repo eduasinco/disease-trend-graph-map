@@ -18,8 +18,8 @@ export const environment = {
 Then run `ng serve` or `npm start`to compile the project and access to the url specified, normally: `http://localhost:4200/`.
 
 ## Summary
-1. Change `GOOGLE_MAPS_API_KEY` inside `/disease-trend-graph-map/src/app/app.module.ts`.
-2. Access to the project file in terminal.
-3. `npm install`
+1. Access to the project file in terminal.
+2. `npm install`
+3. Change `API_KEY` inside `src/environments/environment.prod.ts`.
 4. `ng serve`
 5. Open `http://localhost:4200/` in browser.
