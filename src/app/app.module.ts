@@ -32,7 +32,7 @@ import { AgmCoreModule } from '@agm/core';
     PlotlyModule,
     NouisliderModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBLEkT9a5zw8uxoXkpYUZJ6-ojasnqdM9g',
+      apiKey: 'GOOGLE_MAPS_API_KEY',
       libraries: ['places']
     }),
     RouterModule.forRoot([
