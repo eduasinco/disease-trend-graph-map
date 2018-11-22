@@ -8,11 +8,7 @@ Download the project and open the terminal in the project file. Once there execu
 
 Then access to the file `src/environments/environment.prod.ts` and change the `API_KEY` inside the code:
 ```
-export const environment = {
-    production: true,
-    API_URL: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?',
-    GOOGLE_MAPS_API_KEY: 'API_KEY'
-};
+const GOOGLE_MAPS_API_KEY =  'API_KEY';
 ```
 
 Then run `ng serve` or `npm start`to compile the project and access to the url specified, normally: `http://localhost:4200/`.
