@@ -15,7 +15,6 @@ export class MapComponent implements OnInit {
     retrieve_ended = false;
     address: string;
     articles: any;
-    results: any;
     url1 = environment.API_URL;
     url2 = environment.API_URL_2;
     google_url = environment.GOOGLE_MAPS_URL;
@@ -34,7 +33,7 @@ export class MapComponent implements OnInit {
 
     search() {
         this.retrieve_ended = false;
-        const url1 = this.url1 + 'db=pubmed&retmode=json&term=' + this.disease;
+        const url1 = this.url1 + 'db=pubmed&retmode=json&term=' + this.disease + '+AND+' + (new Date().getFullYear());
 
         this.http.get(url1)
             .subscribe(response => {
