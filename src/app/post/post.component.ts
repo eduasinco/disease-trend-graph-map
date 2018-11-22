@@ -5,7 +5,7 @@ import {BadInput} from '../common/app-bad-input-error';
 import {NotFoundError} from '../common/app-not-found-error';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {catchError} from 'rxjs/operators';
-import {HttpClient} from '../../../node_modules/@angular/common/http';
+import {HttpClient, HttpHeaders} from '../../../node_modules/@angular/common/http';
 import {environment} from '../../environments/environment.prod';
 import {throwError} from 'rxjs';
 
@@ -24,7 +24,6 @@ export class PostComponent implements OnInit {
   termm = 'cancer';
   year_array: Array<number>;
   count_array: Array<number>;
-  ids_array = [];
   retrieve_ended = false;
   url = environment.API_URL;
   f = this.fb.group({
@@ -78,7 +77,7 @@ export class PostComponent implements OnInit {
     this.count_array = [];
     this.year_array = [];
     params.set('retmode', 'json');
-    // params.set('rettype', 'count');
+    params.set('rettype', 'count');
     if (this.f.value.term) {
       this.termm = this.f.value.term;
     }
@@ -97,16 +96,15 @@ export class PostComponent implements OnInit {
     for (const i of Array.from(Array(this.range).keys())) {
       const year = this.date + i;
       const url = this.url + params.toString() + '&term=' + this.termm + '+AND+' + year;
-      this.http.get(url)
+
+        this.http.get(url)
         .pipe(catchError(this.handleError))
         .subscribe(posts => {
           this.posts = posts;
-          this.ids_array.concat(this.posts.esearchresult['idlist']);
           this.count_array.push(this.posts.esearchresult['count']);
           this.year_array.push(year);
           c++;
           if (c === this.range) {
-            console.log(this.ids_array);
             this.retrieve_ended = true;
             this.graph = {
               data: [

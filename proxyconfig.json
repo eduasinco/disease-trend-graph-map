@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "/rest": {
+      "target": "http://endpoint.com:8080/package/",
+      "pathRewrite": {
+        "^/rest": ""
+      },
+      "secure": false
+    }
+  }
+}
