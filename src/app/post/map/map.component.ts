@@ -2,8 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {} from '@types/googlemaps';
 import {environment} from "../../../environments/environment.prod";
 import {PostService} from "../../services/post/post.service";
-import {HttpClient, HttpHeaders} from "../../../../node_modules/@angular/common/http";
-import {map} from "rxjs/operators";
+import {HttpClient} from "../../../../node_modules/@angular/common/http";
 
 @Component({
     selector: 'app-map',
@@ -21,8 +20,8 @@ export class MapComponent implements OnInit {
     url2 = environment.API_URL_2;
     google_url = environment.GOOGLE_MAPS_URL;
 
-    lat = 43.678418;
-    lng = -79.809007;
+    lat = 30;
+    lng = -25;
     locations = [];
 
     constructor(private service: PostService,
@@ -50,8 +49,7 @@ export class MapComponent implements OnInit {
                         this.articles = response2.toString()
                         const s = '<Affiliation>'
                         const matches = this.articles.match(/<Affiliation>([\s\S]*?)<\/Affiliation>/g);
-                        let locations = [];
-                        let c = 0;
+
                         for (const name of matches) {
                             this.address = name.slice(s.length, name.length - s.length - 1);;
                             const google_url = this.google_url + '&callback=initMap&input=' + this.address.split(' ').join('+');

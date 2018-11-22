@@ -1,7 +1,7 @@
 <div class="pb-5">
   <h1>Map Plot</h1>
 
-  <agm-map [latitude]="lat" [longitude]="lng">
+  <agm-map [zoom]="3" [latitude]="lat" [longitude]="lng">
     <agm-marker *ngFor="let l of locations" [latitude]="l[0]" [longitude]="l[1]" [iconUrl]="
       {
         url: './assets/locationiconred.png',
